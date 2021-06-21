@@ -2,6 +2,12 @@
 <html lang="en">
   <head>
     <title>TE4 Pizza Projekt 1 Steg 1</title>
+    <?php
+    include 'dbincludes.php';
+
+               
+                
+    ?>
       <link rel="icon" href="https://www.ntigymnasiet.se/wp-content/uploads/sites/29/2018/09/cropped-nti-sitelogo-32x32.png" sizes="32x32" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -130,7 +136,16 @@
     					<div class="text p-4">
     						<h3>Italian Pizza</h3>
     						<p>Blandade örter och solmogna grönsaker </p>
-    						<p class="price"><a href="#" class="ml-2 btn btn-white btn-outline-white">+</a><span>  150 SEK</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">-</a></p>
+               <?php
+                $query1="SELECT price FROM pizza WHERE pza_name='Italian Pizza'";
+                $result = $mysqli->query($query1);
+                if (mysqli_num_rows($result) >0){
+                  while ($row=$result->fetch_assoc()){
+                    $price = $row["price"];
+                  }
+                }
+                ?>
+    						<p class="price"><a href="#" class="ml-2 btn btn-white btn-outline-white">+</a><span> <?php echo $price ?> SEK</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">-</a></p>
     					</div>
     				</div>
     			</div>
@@ -140,7 +155,16 @@
     					<div class="text p-4">
     						<h3>Greek Pizza</h3>
     						<p>Oliver och fetaost med härlig gyros</p>
-    						<p class="price"><a href="#" class="ml-2 btn btn-white btn-outline-white">+</a><span>  155 SEK</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">-</a></p>
+                <?php
+                $query2="SELECT price FROM pizza WHERE pza_name='Greek Pizza'";
+                $result2 = $mysqli->query($query2);
+                if (mysqli_num_rows($result2) >0){
+                  while ($row2=$result2->fetch_assoc()){
+                    $price2 = $row2["price"];
+                  }
+                }
+                ?>
+    						<p class="price"><a href="#" class="ml-2 btn btn-white btn-outline-white">+</a><span> <?php echo $price2 ?> SEK</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">-</a></p>
     					</div>
     				</div>
     			</div>
@@ -150,7 +174,16 @@
     					<div class="text p-4">
     						<h3>Caucasian Pizza</h3>
     						<p>Ost och skinka med sliceade grönsaker</p>
-    						<p class="price"><a href="#" class="ml-2 btn btn-white btn-outline-white">+</a><span>  145 SEK</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">-</a></p>
+                <?php
+                $query3="SELECT price FROM pizza WHERE pza_name='Caucasian Pizza'";
+                $result3 = $mysqli->query($query3);
+                if (mysqli_num_rows($result3) >0){
+                  while ($row3=$result3->fetch_assoc()){
+                    $price3 = $row3["price"];
+                  }
+                }
+                ?>
+    						<p class="price"><a href="#" class="ml-2 btn btn-white btn-outline-white">+</a><span> <?php echo $price3 ?> SEK</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">-</a></p>
     					</div>
     				</div>
     			</div>
