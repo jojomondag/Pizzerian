@@ -1,0 +1,63 @@
+<head>
+	<style>
+		.pizzaFrame {
+		float: left;
+		background-color: lightgrey;
+		width: 200;
+		border: 15px solid green;
+		padding: 20px;
+		margin: 20px;
+		text-align: center;
+		}
+		.RemoveButton
+		{
+			float: right;
+		}
+		.pskit
+		{
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="Menu">
+		<div class="pizzaFrame">
+			<img src="images/pizza-4.jpg" width="120px">
+			<p>Italian Pizza: 155kr</p>
+			<button type="button" onclick="ItalianPizzaFunc(1)">Add</button>
+		</div>
+		<div class="pizzaFrame">
+			<img src="images/pizza-5.jpg" width="120px">
+			<p>Greek Pizza: 195kr</p>
+			<button type="button" onclick="GreekPizzaFunc(1)">Add</button>
+		</div>
+		<div class="pizzaFrame">
+			<img src="images/pizza-7.jpg" width="120px">
+			<p>Swedisch Pizza: 99kr</p>
+			<button type="button" onclick="SvenskPizzaPizzaFunc(1)">Add</button>
+		</div>
+	</div>
+	
+	<hr class="line1">
+
+	<button type="button" onclick="buy()">Buy</button>
+	<label id="summa">Summa:</label>
+	<hr class="line1">
+
+	<div style="width: 100%;">
+		<p id="ItalianPizza" class="pskit">Italian pizza:</p>
+		<button id="removeItalianPizzaButton"class="RemoveButton" type="button" onclick="ItalianPizzaFunc(-1)">-</button>
+	</div>
+	<div style="width: 100%;">
+		<p id="GreekPizza"  class="pskit">Greek pizza: </p>
+		<button id="removeGreekPizzaButton" class="RemoveButton"  type="button" onclick="GreekPizzaFunc(-1)">-</button>	
+	</div>
+	<div style="width: 100%;">
+		<p id="SvenskPizza"  class="pskit">Swedisch pizza:</p>
+		<button id="removeSvenskPizzaButton" class="RemoveButton" type="button" onclick="SvenskPizzaPizzaFunc(-1)">-</button>
+	</div>
+	<script src="js/createDeleteOrder.js"></script>
+
+	
+</body>
+</html>
