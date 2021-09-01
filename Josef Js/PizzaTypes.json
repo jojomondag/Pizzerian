@@ -1,0 +1,22 @@
+{"Pizzas":[
+    {
+        "name":"MARGHARETA",
+        "price": 80,
+        "toppings":["Tomatsås", "Ost"]
+    },
+    {
+        "name":"VESUVIO",
+        "price": 85,
+        "toppings":["Skinka"]
+    },
+    {
+        "name":"CAPRICCIOSA",
+        "price": 90,
+        "toppings":["Skinka", "Svamp"]
+    },
+    {
+        "name":"CAPRICCIOSA2",
+        "price": 90,
+        "toppings":["Skinka", "Svamp"]
+    }
+]}
